@@ -1,0 +1,113 @@
+{
+  "id": "4e0c5bf9-a946-4353-a06e-1d8932e439a8",
+  "version": "2.0",
+  "name": "RTSLab_GoogleSearch",
+  "url": "https://www.google.com",
+  "tests": [{
+    "id": "09aa9892-ed89-48f5-be07-e3870414440f",
+    "name": "RTS Labs Search",
+    "commands": [{
+      "id": "8bd2db15-3489-497f-8ec1-326303ad06aa",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f666267e-ee78-4992-82c0-e1987dcfd144",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "07b57415-7743-427c-8381-dc763c6c116a",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//div/div/div/div/div[2]/input", "xpath:position"]
+      ],
+      "value": "RTS Labs"
+    }, {
+      "id": "a1f9378a-a822-4158-8b15-1b13d645231f",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//div/div/div/div/div[2]/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "42739afa-b9ab-47e9-a24a-b37d946862e0",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.g:nth-child(1) > div:nth-child(2) a > .TbwUpd",
+      "targets": [
+        ["css=.g:nth-child(1) > div:nth-child(2) a > .TbwUpd", "css:finder"],
+        ["xpath=//div[@id='rso']/div/div/div/div/div/div/div/a/div", "xpath:idRelative"],
+        ["xpath=//div/div/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a1e79b66-d837-4f6a-9bfc-51a07d89b0b1",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.g:nth-child(1) > div:nth-child(2) .LC20lb",
+      "targets": [
+        ["css=.g:nth-child(1) > div:nth-child(2) .LC20lb", "css:finder"],
+        ["xpath=//div[@id='rso']/div/div/div/div/div/div/div/a/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'RTS Labs')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0e8fbb79-8bb1-4ca0-a6cd-8d7f060337ea",
+      "comment": "",
+      "command": "click",
+      "target": "css=.g:nth-child(1) > div:nth-child(2) .LC20lb",
+      "targets": [
+        ["css=.g:nth-child(1) > div:nth-child(2) .LC20lb", "css:finder"],
+        ["xpath=//div[@id='rso']/div/div/div/div/div/div/div/a/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'RTS Labs')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b81858c2-87fe-4bdd-8ee9-c5dad33da89e",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.g:nth-child(1) > div:nth-child(2) .LC20lb",
+      "targets": [
+        ["css=.g:nth-child(1) > div:nth-child(2) .LC20lb", "css:finder"],
+        ["xpath=//div[@id='rso']/div/div/div/div/div/div/div/a/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'RTS Labs')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "39e40823-8e6b-4373-8421-03a880a0cb75",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "f8395160-c049-4f1d-8675-93266ba7a29a",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["09aa9892-ed89-48f5-be07-e3870414440f"]
+  }],
+  "urls": ["https://www.google.com/"],
+  "plugins": []
+}

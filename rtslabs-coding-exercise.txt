@@ -1,0 +1,60 @@
+//Importing libraries that are required to run the code below
+
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+//Class created under the SRC
+public class rtslabs {
+
+	//Method
+	public static void main(String[] args) {
+			
+		
+		//initiating the Chrome driver and indicating its location
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Wellington Romero\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		
+		//launching a new instance of Google Chrome
+		WebDriver driver = new ChromeDriver();
+		
+		//navigating to desired site
+		driver.get("http://www.google.com");
+		
+		//maximizing the browser 
+		driver.manage().window().maximize();
+		
+		//locating the search box
+		WebElement p=driver.findElement(By.name("q"));
+		
+		//entering RTS Labs 
+		p.sendKeys("RTS Labs");
+		
+		//submitting the search or hitting enter 
+		//p.submit(); or p.sendKeys(Keys.ENTER);
+		p.sendKeys(Keys.ENTER);
+		
+		
+		//wait 5 seconds - Does not seem to be working
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		
+		//clicking on RTS Labs - could not get to work.
+		//driver.findElement(By.name("RTS Labs")).click();
+		//driver.findElement(By.partialLinkText("2ahUKEwiZt")).click();
+		//driver.findElement(By.xpath("//a[@href='LC20lb DKV0Md']")).click();
+		//driver.findElement(By.className("LC20lb DKV0Md")).click();
+		driver.findElement(By.linkText("Our Careers")).click(); // worked out fine.
+		
+		
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		
+		//close browser
+		driver.close();
+	}
+
+}
